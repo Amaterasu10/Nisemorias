@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:ital@0;1&display=swap');
+$rem: 1rem;
+
+$primary-background: #FCFCFC;
+$primary-darker-bg:#5D5D5D;
+$primary-darkest-bg:#303030;
+$primary-transparent-bg: #dfe0e0bf;
+$secondary-background: #474747;
+$secondary-shading-bg: #575A5E;
+
+$primary-color: #222222 ;
+$primary-color-matching: #00754B;
+$secondary-color:white;
+
+$primary-font: 'Cinzel', serif;
+$secondary-font: 'Montserrat', sans-serif;
+
+$box-shadow-negative: 0 10px 10px -5px;
+$box-shadow-blur: 5px 5px 20px;
+$txt-shadow-basic: 2px 4px 3px rgba(0,0,0,0.3);
+
+$txt-shadow-smoke:
+2px 8px 6px rgba(0,0,0,0.2),
+0px -5px 16px rgba(255,255,255,0.3);
+
+$txt-shadow-heavy: 
+0px 4px 3px rgba(0,0,0,0.4),
+0px 8px 13px rgba(0,0,0,0.1),
+0px 18px 23px rgba(0,0,0,0.1);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: $primary-font;
+    
+}
+
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: #424242;
+    box-shadow: $box-shadow-blur;
+}
+
+
+h1,h2 {
+    z-index: 1;
+    color: $primary-color;
+    text-shadow: $txt-shadow-smoke;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: bold;
+    &:hover {
+        text-decoration: underline;
+    }
+}

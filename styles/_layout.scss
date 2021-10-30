@@ -1,0 +1,23 @@
+.landing-page {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    position: relative;
+}
+
+.gallery-container {
+
+}
+
+.gallery {
+    padding: 10px;
+    
+    display: grid;
+    grid-gap: 0.5em;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    
+    img {
+        max-width: 100%;
+    }
+}
