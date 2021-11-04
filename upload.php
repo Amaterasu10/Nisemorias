@@ -1,5 +1,9 @@
-<?php include 'header.php';?>
-
+<!DOCTYPE html>
+<html lang="en">
+<?php include 'includes/head.php';?>
+<body>
+  <?php include 'includes/header.php';?>
+<section class="landing-page text-shadow-smoke inner-shadow">
 <?php
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -49,3 +53,6 @@ if ($uploadOk == 0) {
   }
 }
 ?>
+</section>
+</body>
+</html>
