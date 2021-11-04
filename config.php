@@ -1,9 +1,4 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "nisimorias";
-$tables = array('Users', 'images');
 // Create connection
 // $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -20,9 +15,10 @@ if ($conn->query($sql) === TRUE) {
 
     // and create a new table for that database
     $sql = "CREATE TABLE $tables[0] (
-        username VARCHAR(30) NOT NULL,
-        pass VARCHAR(30) NOT NULL,
-        reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        id int NOT NULL AUTO_INCREMENT,
+        uname VARCHAR(50) NOT NULL,
+        pass VARCHAR(50) NOT NULL,
+        primary key(id)
     )";
 
     //check if the table is successfully created
@@ -39,10 +35,29 @@ else {
 }
 echo "Connected successfully <br>";
 
+// $conn = new mysqli($servername, $username, $password, $dbname);
+
+// $sql = "INSERT INTO $tables[0] (uname, pass)
+// VALUES ('admin',123)";
+
+// if ($conn->query($sql) === TRUE) {
+//   echo "New record created successfully";
+// } else {
+//   echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
 $conn->close();
 
-// function checkDB_if_exist($conn){
+function register_user($conn, $sql, $uname, $pass){
+    $sql = "INSERT INTO Users (uname, pass)
+    VALUES ('$uname', $pass)";
 
-// };
-
+    if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+};
 ?>
