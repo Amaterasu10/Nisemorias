@@ -245,3 +245,15 @@ img {
   .tooltip:hover .tooltiptext {
     visibility: visible;
   }
+
+  .relative {
+    position: relative;
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    color: red;
+  }
