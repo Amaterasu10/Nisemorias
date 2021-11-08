@@ -9,7 +9,7 @@
                     <a href="gallery.php" class="btn btn--skew btn-default">gallery</a>
                 </li>
                 <li>
-                    Hello, <a href="#profile" class="btn btn--skew btn-default">yourname</a>!
+                    Hello, <a href="#profile" class="btn btn--skew btn-default"><?php echo $name;?></a>!
                 </li>
             </ul>
         </nav>
