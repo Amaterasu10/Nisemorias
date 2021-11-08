@@ -16,6 +16,7 @@ if ($conn->query($sql) === TRUE) {
     // and create a new table for that database
     $sql = "CREATE TABLE $tables[0] (
         id int NOT NULL AUTO_INCREMENT,
+        name VARCHAR(50) NOT NULL,
         uname VARCHAR(50) NOT NULL,
         pass VARCHAR(50) NOT NULL,
         primary key(id)
@@ -50,9 +51,9 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 $conn->close();
 
-function register_user($conn, $sql, $uname, $pass){
-    $sql = "INSERT INTO Users (uname, pass)
-    VALUES ('$uname', $pass)";
+function register_user($conn, $sql, $name, $uname, $pass){
+    $sql = "INSERT INTO Users (name , uname, pass)
+    VALUES ('$name', '$uname', '$pass')";
 
     if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
