@@ -5,7 +5,6 @@
     $password = "";
     $dbname = "nisimorias";
     $tables = array('Users', 'images');
-
     $name = "yourname";
     $uname;
     $pass;
