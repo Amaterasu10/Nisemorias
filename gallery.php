@@ -36,8 +36,13 @@
 
         <div class="masonry">
             <?php 
+            $imageExtentions = [".JPEG", ".JPG", ".GIF", ".PNG", ".TIFF", ".PSD", ".PDF", ".EPS", ".AI", ".INDD", ".RAW"];
                 foreach($files as $file){
-                    echo "<div class='item'><img class='big' src='uploads/$file'></div>";
+                    echo "<div class='item'>";
+                    echo "<img class='big' src='uploads/$file'>";
+                    $file_name = str_replace($imageExtentions,"",$file);
+                    echo "<h4 class='centerer'>$file_name</h4>";
+                    echo "</div>";
                 }
             ?>
         </div>
