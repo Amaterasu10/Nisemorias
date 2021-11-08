@@ -8,7 +8,7 @@
 <?php include 'includes/header.php';?>
     <section class="landing-page text-shadow-smoke inner-shadow">
         <h3>You have to login first before you can access the gallery</h3>
-        <div class="card" style="width: 32%;padding: 50px;>
+        <div class="card" style="width: 32%;padding: 50px;">
             <form action="" method="post">
                 <label for="username">Username:</label>
                 <input autocomplete="off" type="text" name="username">
@@ -16,7 +16,7 @@
                 <label for="password">Password:</label>
                 <input autocomplete="off" type="text" name="password">     
                 
-                <button type="submit">Login</button>    
+                <button type="submit">Login</button>
                 
                 <span class="centerer"><a href="register.php" class="btn btn--skew btn-default">Register</a></span>
 
